@@ -1,0 +1,44 @@
+@YasaCekme.WebApi_HostAddress = http://localhost:5245
+
+//Yargýtay Search
+GET {{YasaCekme.WebApi_HostAddress}}/api/Yargitay/GetYargiyatResult/hukuk
+Accept: application/json
+
+###
+
+//Yargýtay Document By Id
+GET {{YasaCekme.WebApi_HostAddress}}/api/Yargitay/GetYargitayDocumenById/291597300
+Accept: application/json
+
+###
+
+//Danýþtay Search
+POST {{YasaCekme.WebApi_HostAddress}}/api/Danistay/GetDanistayKarar
+Accept: application/json
+Content-Type: application/json
+
+{
+    "data":
+    {
+        "andKelimeler":[],
+        "orKelimeler":["\"hukuk\""],
+        "notAndKelimeler":[],
+        "notOrKelimeler":[],
+        "pageSize":10,
+        "pageNumber":1
+    }
+}
+
+###
+
+//Danýþtay Document By Id
+GET {{YasaCekme.WebApi_HostAddress}}/api/Danistay/GetDanistayKararDocumentById/834796600
+Accept: application/json
+
+###
+
+//Mevzuat Kanunlar Search
+GET {{YasaCekme.WebApi_HostAddress}}/api/Mevzuat/SearchMevzuat
+Accept: application/json
+
+###
